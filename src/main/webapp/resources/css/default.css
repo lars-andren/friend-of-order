@@ -1,0 +1,8 @@
+#dialog {
+  display:none;
+}
+.myTarget {
+  font-weight:bold;
+  font-style:italic;
+  color:red;
+}
