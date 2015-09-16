@@ -12,6 +12,7 @@ $(function() {
     $("#reportDialog").dialog("close");
   }
 
+  var reportMail = $("#reporteeMail").text();
   var getResponse = function() {
 
     var answer;
@@ -22,9 +23,9 @@ $(function() {
   }
 
   var dialogOpts = {
-    dialogClass : 'no-close',
-    height : 300,
-    width : 300,
+    dialogClass : "no-close",
+    height : 400,
+    width : 400,
     scrollable : true,
     modal : true,
     closeOnEscape : true,
@@ -49,6 +50,7 @@ $(function() {
     $("#correction").val("");
     $("#reportDialog").dialog("open");
     $("#marked").text(getSelectionText());
+    $("#reportee").text(reportMail);
   });
 });
 
