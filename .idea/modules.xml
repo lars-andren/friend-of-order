@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/faultFinder.iml" filepath="$PROJECT_DIR$/faultFinder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/friend-of-order.iml" filepath="$PROJECT_DIR$/friend-of-order.iml" />
     </modules>
   </component>
 </project>

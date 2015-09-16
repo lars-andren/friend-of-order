@@ -1,66 +1,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
-  <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/redmond/jquery-ui.css">
+  <script src="../js/lib/jquery-1.11.3.js"></script>
+  <script src="../js/lib/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+  <script src="../js/openDialog.js"></script>
+  <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/redmond/jquery-ui.css">-->
+  <link rel="stylesheet" href="../css/jquery-ui.theme.min.css">
 
-  <script type="text/javascript">
-    $(function() {
 
-      // Allows user to click Enter key in text field and it will submit the dialog
-      $('#myDialog').keypress(function(e) {
-        if (e.keyCode == $.ui.keyCode.ENTER) {
-          getResponse();
-        }
-      });
-
-      var cancel = function() {
-        $("#myDialog").dialog("close");
-      }
-
-      var getResponse = function() {
-        var answer;
-        /*// for radio-button selection
-         $("input").each(function(){
-         (this.checked == true) ? answer = $(this).val() : null;
-         });
-         */
-
-        answer = $("#first_name").val();
-
-        // This adds it dynamically
-        // $("<p>").text(answer).insertAfter($("#poll"));
-        $("#result").text(answer);
-        $("#myDialog").dialog("close");
-      }
-
-      var dialogOpts = {
-        modal : true,
-        closeOnEscape : true,
-        buttons : {
-          "Done" : getResponse,
-          "Cancel" : cancel
-        },
-        autoOpen : false
-      };
-      $("#myDialog").dialog(dialogOpts);
-      $("#poll").click(function() {
-        $("#myDialog").dialog("open");
-      });
-    });
-  </script>
 
 </head>
 <body>
-<button id="poll">Poll</button>
-<div id="myDialog" class="flora" title="This is the title">
-  <p>Question?</p>
-  <label for="yes">Yes!</label><input type="radio" id="yes" value="yes25" name="question"><br>
-  <label for="no">No!</label><input type="radio" id="no" value="no" name="question">
-  <br/>
-  First Name: <input type="text" id="first_name" />
+Text about stuff. Other stuff. Fish. Eu gosto bebe cerveija e como queijo.
 
+<p>
+  <button id="report">Report</button>
+</p>
+
+<div id="reportDialog" class="flora" title="Report an error">
+  There's an error here<br>
+    <textarea id="marked"></textarea>
+
+  <p>Should be<br>
+   <input type="text" id="correction"/>
+  </p>
 </div>
 
 <div style='color: green;' id='result'>
